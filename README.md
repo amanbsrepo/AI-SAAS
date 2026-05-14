@@ -36,52 +36,178 @@ AI-SaaS is an advanced and adaptable Software-as-a-Service (SaaS) application th
 
 ## Getting Started
 
-To run AI-SaaS locally, follow these steps:
+# AI SaaS Platform
 
-1. **Clone the repository**:
+An AI-powered SaaS application built with Next.js, Prisma, Stripe, Clerk, OpenAI, and Replicate.
+
+This platform provides multiple AI utilities including:
+
+- AI Chat
+- Code Generation
+- Image Generation
+- Music Generation
+- Video Generation
+- Subscription Billing
+- User Authentication
+- API Usage Tracking
+
+---
+
+# Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| Next.js 13 | Frontend + Backend |
+| TypeScript | Type Safety |
+| Tailwind CSS | UI Styling |
+| Prisma | ORM |
+| MySQL / PlanetScale | Database |
+| Clerk | Authentication |
+| Stripe | Payments & Subscription |
+| OpenAI API | AI Text Generation |
+| Replicate API | Media Generation |
+
+---
+
+# Features
+
+## Authentication
+- Secure authentication using Clerk
+- Protected dashboard routes
+- User session management
+
+## AI Tools
+- Conversational AI
+- AI code generation
+- AI image generation
+- AI music generation
+- AI video generation
+
+## Subscription System
+- Free and Pro plans
+- Stripe checkout integration
+- Usage limitation for free users
+
+## Modern UI
+- Responsive dashboard
+- Dark mode support
+- Optimized layouts using Tailwind CSS
+
+---
+
+# Project Structure
 
 ```bash
-git clone https://github.com/amanbsrepo/AI-SAAS.git
-cd ai-saas
+app/
+components/
+lib/
+prisma/
+public/
+screenshots/
 ```
 
-2. **Install dependencies**:
+---
+
+# Architecture Flow
+
+```text
+User
+  ↓
+Next.js Frontend
+  ↓
+API Routes
+  ↓
+Authentication (Clerk)
+  ↓
+AI Services (OpenAI / Replicate)
+  ↓
+Database (Prisma + MySQL)
+  ↓
+Stripe Billing System
+```
+
+---
+
+# Environment Variables
+
+Create a `.env` file in the project root.
+
+```env
+DATABASE_URL=
+
+NEXT_PUBLIC_APP_URL=
+
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+
+OPENAI_API_KEY=
+
+REPLICATE_API_TOKEN=
+
+STRIPE_SECRET_KEY=
+STRIPE_WEBHOOK_SECRET=
+
+CRISP_WEBSITE_ID=
+```
+
+---
+
+# Local Development
+
+## Install dependencies
 
 ```bash
 npm install
-# or
-yarn install
 ```
 
-3. **Configure environment variables**:
+## Run Prisma
 
-To ensure proper functionality, set up environment variables for API keys and other sensitive information. Create a `.env` file in the root directory and populate it with the necessary variables. For reference, consult the `.env.example` file for the required variables.
+```bash
+npx prisma generate
+npx prisma db push
+```
 
-4. **Run the application**:
+## Start development server
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-The application should now be running locally at `http://localhost:3000`.
+Open:
 
-## Deployment
+```text
+http://localhost:3000
+```
 
-AI-SaaS can be deployed to various hosting platforms that support Next.js applications. Before deployment, make sure you have configured the necessary environment variables for production.
+---
 
-## Contributions
+# Deployment
 
-Contributions to AI-SaaS are highly appreciated! If you encounter any bugs or have suggestions for new features, please feel free to open an issue or submit a pull request.
+Recommended deployment platform:
 
-When contributing, adhere to the existing code style and include comprehensive test cases for new features.
+- Vercel
+
+Recommended database:
+
+- PlanetScale
+- Railway
+
+Before deployment:
+- Configure production environment variables
+- Add Stripe webhook URL
+- Configure Clerk production domain
+
+
+# Security Notes
+
+- Never commit `.env` files
+- API keys must remain private
+- Stripe webhook secrets should only exist in server environments
+- Database credentials should never be exposed publicly
+
+---
 
 ## License
 
-AI-SaaS is released under the [MIT License](https://opensource.org/licenses/MIT).
-
-## Acknowledgments
-
-AI-SaaS is built with the invaluable support and integration of several open-source projects and technologies. I extend my gratitude to the developers and maintainers of Next.js, OpenAI, Replicate, Tailwind CSS, Prisma, and Stripe for their significant contributions to the development community.
-[![Netlify Status](https://api.netlify.com/api/v1/badges/6da7f929-c69e-4c0a-9fd6-596a41129274/deploy-status)](https://app.netlify.com/sites/superlative-malabi-796b55/deploys)
+Based on an open-source project licensed under MIT.
+Modified and customized for learning and development purposes.
