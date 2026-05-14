@@ -26,13 +26,13 @@ AI-SaaS is an advanced and adaptable Software-as-a-Service (SaaS) application th
 - **Stripe Integration**: AI-SaaS seamlessly incorporates Stripe for secure and efficient payment processing. Users can subscribe to premium plans and access additional AI services based on their subscription level.
 
 ## Screenshots
-<img src="/images/homepage.png" />
-<img src="/images/dashboard.png" />
-<img src="/images/chat.png" />
-<img src="/images/code.png" />
-<img src="/images/image.png" />
-<img src="/images/settings.png" />
-<img src="/images/plans.png" />
+<img src="./screenshots/homepage.png" />
+<img src="./screenshots/dashboard.png" />
+<img src="./screenshots/chat.png" />
+<img src="./screenshots/code.png" />
+<img src="./screenshots/image.png" />
+<img src="./screenshots/settings.png" />
+<img src="./screenshots/plans.png" />
 
 ## Getting Started
 
